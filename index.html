@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografik Atlet: Hanifan Yudani Kusumah</title>
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Import Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/4a1c7f53c8.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* CSS RESET & GLOBAL STYLES */
+        :root {
+            --primary-red: #D22B2B;
+            --dark-red: #a51e1e;
+            --pure-white: #FFFFFF;
+            --light-gray: #f0f2f5;
+            --medium-gray: #e4e6eb;
+            --dark-gray: #333333;
+            --text-color: #4a4a4a;
+            --gold-medal: #FFD700;
+            --silver-medal: #C0C0C0;
+            --bronze-medal: #CD7F32;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.discordapp.net/attachments/1163032606967857152/1404326868005421147/WhatsApp_Image_2025-08-11_at_11.50.45_e451839d.jpg?ex=689ac8d0&is=68997750&hm=5c3727b0676ffac8e2845af25229ab6c572f6b20201dd9bfb6f03262b28c9951&=&format=webp&width=924&height=519');
+            background-size: cover;
+            background-position: center 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--pure-white);
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 5rem;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            line-height: 1;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: -10px;
+        }
+
+        /* MAIN CONTENT AREA */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -100px; /* Pulls profile pic up */
+            position: relative;
+            z-index: 3;
+        }
+
+        .profile-pic-container {
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid var(--pure-white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .flag-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(to bottom, #d22b2b 50%, #ffffff 50%);
+            border-radius: 50%;
+            border: 2px solid var(--pure-white);
+        }
+
+        /* CARD STYLING */
+        .card {
+            background: var(--pure-white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .animate-on-scroll {
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid var(--medium-gray);
+            padding-bottom: 10px;
+        }
+
+        .section-title i {
+            margin-right: 15px;
+            font-size: 2.2rem;
+        }
+
+        /* PROFILE SECTION */
+        .profile-section {
+            padding-top: 40px;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .profile-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-item i {
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .profile-item-text h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .profile-item-text p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        /* ACHIEVEMENTS SECTION */
+        .achievements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .achievements-table th, .achievements-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .achievements-table th {
+            background-color: var(--light-gray);
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .achievements-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .achievements-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .medal {
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .medal i {
+            margin-right: 8px;
+        }
+
+        .medal-details {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-color);
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        .medal.gold { background-color: rgba(255, 215, 0, 0.2); color: #b8860b; }
+        .medal.silver { background-color: rgba(192, 192, 192, 0.3); color: #708090; }
+        .medal.bronze { background-color: rgba(205, 127, 50, 0.2); color: #8b4513; }
+
+        /* MEMORABLE MOMENTS & EXTRA DATA */
+        .moments-grid, .extra-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .moments-grid, .extra-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .moment-item, .extra-item {
+            background: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-red);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .moment-item i, .extra-item i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .moment-item-text h3, .extra-item-text h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark-gray);
+        }
+
+        .moment-item-text p, .extra-item-text p {
+            font-size: 0.95rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--dark-gray);
+            color: var(--light-gray);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer h3 {
+            font-family: 'Teko', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-line {
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-red);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .footer-credit {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media screen and (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+            }
+            .profile-header {
+                margin-top: -75px;
+            }
+
+            .achievements-table thead {
+                display: none;
+            }
+            .achievements-table, .achievements-table tbody, .achievements-table tr, .achievements-table td {
+                display: block;
+                width: 100%;
+            }
+            .achievements-table tr {
+                margin-bottom: 15px;
+                border: 1px solid var(--medium-gray);
+                border-radius: 8px;
+                padding: 10px;
+            }
+            .achievements-table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+                border: none;
+            }
+            .achievements-table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                font-weight: 600;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p>Infografik Atlet Pencak Silat</p>
+            <h1>Hanifan Yudani Kusumah</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-pic-container">
+                    <img src="https://media.discordapp.net/attachments/1163032606967857152/1404326671582101604/WhatsApp_Image_2025-08-11_at_11.50.05_efeda26b.jpg?ex=689ac8a1&is=68997721&hm=630b7ae7eb78f613a1a6890f0210cf569328930446c3d15b052ffc4a73260c17&=&format=webp&width=244&height=324" alt="Foto Profil Hanifan Yudani Kusumah" class="profile-pic">
+                    <div class="flag-icon"></div>
+                </div>
+            </div>
+
+            <section class="card animate-on-scroll profile-section">
+                <h2 class="section-title"><i class="fa-solid fa-address-card"></i>Profil Singkat</h2>
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="profile-item-text">
+                            <h3>Nama Lengkap</h3>
+                            <p>Hanifan Yudani Kusumah</p>
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div class="profile-item-text">
+                            <h3>Tempat & Tanggal Lahir</h3>
+                            <p>Bandung, 25 Oktober 1997</p>
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fa-solid fa-ruler-vertical"></i>
+                        <div class="profile-item-text">
+                            <h3>Tinggi Badan</h3>
+                            <p>165 cm</p>
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fa-solid fa-house-flag"></i>
+                        <div class="profile-item-text">
+                            <h3>Asal Dojo</h3>
+                            <p>Perguruan Silat Tadjimalela</p>
+                        </div>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="profile-item-text">
+                            <h3>Latar Keluarga</h3>
+                            <p>Ayah & Ibu adalah pesilat, diperkenalkan silat sejak SD Kelas 2</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card animate-on-scroll">
+                <h2 class="section-title"><i class="fa-solid fa-trophy"></i>Prestasi & Kejuaraan</h2>
+                <table class="achievements-table">
+                    <thead>
+                        <tr>
+                            <th>Tahun</th>
+                            <th>Turnamen / Kejuaraan</th>
+                            <th>Cabang & Perolehan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2015</td>
+                            <td>Malaysia Open</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td>Kejurnas Jawa Barat</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>PON Jawa Barat</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>World Champions, Bali</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>Malaysia Open</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>Belgium Open</td>
+                            <td>Emas</td>
+                        </tr>
+                        <tr>
+                            <td>2017</td>
+                            <td>SEA Games, Malaysia</td>
+                            <td>Perunggu</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>Asian Games (Kelas C 55–60 kg)</td>
+                            <td>Emas — final 3-2 vs Nguyễn Thái Linh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="card animate-on-scroll">
+                <h2 class="section-title"><i class="fa-solid fa-star"></i>Momen Berkesan</h2>
+                <div class="moments-grid">
+                    <div class="moment-item">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                        <div class="moment-item-text">
+                            <h3>Selebrasi Ikonis</h3>
+                            <p>Setelah meraih emas di Asian Games 2018, Hanifan memeluk Presiden Joko Widodo dan Prabowo Subianto, mengenakan bendera merah putih—simbol persatuan nasional.</p>
+                        </div>
+                    </div>
+                    <div class="moment-item">
+                        <i class="fa-solid fa-flag"></i>
+                        <div class="moment-item-text">
+                            <h3>Pembawa Bendera</h3>
+                            <p>Bertugas sebagai pembawa bendera Indonesia pada upacara penutupan Asian Games 2018.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card animate-on-scroll">
+                <h2 class="section-title"><i class="fa-solid fa-circle-info"></i>Fakta Tambahan</h2>
+                <div class="extra-grid">
+                    <div class="extra-item">
+                        <i class="fa-solid fa-award"></i>
+                        <div class="extra-item-text">
+                            <h3>SEA Games 2019</h3>
+                            <p>Menambah koleksi medali dengan meraih perak di Filipina.</p>
+                        </div>
+                    </div>
+                    <div class="extra-item">
+                        <i class="fa-solid fa-ring"></i>
+                        <div class="extra-item-text">
+                            <h3>Pasangan Pesilat</h3>
+                            <p>Menikah dengan sesama atlet pencak silat, Pipiet Kamelia, tak lama setelah Asian Games 2018.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h3>Hanifan Yudani Kusumah</h3>
+        <div class="footer-line"></div>
+        <p>Sebuah representasi semangat juang dan persatuan bangsa Indonesia melalui arena Pencak Silat.</p>
+        <p class="footer-credit">© 2024 Dibuat dengan semangat untuk menghormati pahlawan olahraga Indonesia.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Animated Scroll ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Responsive Table Data Labels & Medal Formatting ---
+            const table = document.querySelector('.achievements-table');
+            if (table) {
+                const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent);
+                const rows = table.querySelectorAll('tbody tr');
+
+                rows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    cells.forEach((cell, index) => {
+                        cell.setAttribute('data-label', headers[index]);
+
+                        // --- Medal Formatting ---
+                        if (headers[index] === 'Cabang & Perolehan') {
+                            const originalText = cell.textContent.trim();
+                            let medalType = '';
+                            let details = '';
+
+                            if (originalText.toLowerCase().startsWith('emas')) {
+                                medalType = 'emas';
+                            } else if (originalText.toLowerCase().startsWith('perak')) {
+                                medalType = 'perak';
+                            } else if (originalText.toLowerCase().startsWith('perunggu')) {
+                                medalType = 'perunggu';
+                            }
+
+                            if (medalType) {
+                                let medalClass = '';
+                                if (medalType === 'emas') medalClass = 'gold';
+                                if (medalType === 'perak') medalClass = 'silver';
+                                if (medalType === 'perunggu') medalClass = 'bronze';
+
+                                // Check for details
+                                if (originalText.includes('—')) {
+                                    const parts = originalText.split('—');
+                                    details = parts[1].trim();
+                                }
+
+                                let newHTML = `
+                                    <span class="medal ${medalClass}">
+                                        <i class="fa-solid fa-medal"></i>
+                                        ${medalType.charAt(0).toUpperCase() + medalType.slice(1)}
+                                    </span>
+                                `;
+
+                                if (details) {
+                                    newHTML += `<span class="medal-details">${details}</span>`;
+                                }
+
+                                cell.innerHTML = newHTML;
+                            }
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
